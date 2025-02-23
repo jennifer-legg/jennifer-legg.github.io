@@ -63,6 +63,7 @@ p {
   margin: 10px;
   align-self: stretch;
   padding: 20px;
+  max-width: 250px;
 }
 
 /* Center images and make sure they keep their aspect ratio while fitting
@@ -110,7 +111,7 @@ a:hover {
   }
   .article-container {
     grid-column: 1 / 3;
-    grid-row: 2 / 11;
+    grid-row: 2 / 13;
   }
 }
 
@@ -121,6 +122,6 @@ a:hover {
   }
   .article-container {
     grid-column: 1 / 3;
-    grid-row: 2 / 11;
+    grid-row: 2 / 13;
   }
 }
