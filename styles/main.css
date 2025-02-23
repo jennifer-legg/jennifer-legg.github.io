@@ -101,27 +101,21 @@ a:hover {
 
 /* widescreen displays */
 @media only screen and (min-width: 920px) {
-  /* placeholder */
+  .container {
+    /* some layout rules */
+  }
 }
 
 /* tablets */
 @media only screen and (max-width: 919px) {
-  .intro-about-me {
-    display: none;
-  }
-  .article-container {
-    grid-column: 1 / 3;
-    grid-row: 2 / 13;
+  .container {
+    /* some layout rules */
   }
 }
 
 /* phones */
 @media only screen and (max-width: 400px) {
-  .intro-about-me {
-    display: none;
-  }
-  .article-container {
-    grid-column: 1 / 3;
-    grid-row: 2 / 13;
+  .container {
+    /* some layout rules */
   }
 }
