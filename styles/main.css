@@ -26,7 +26,7 @@ h3 {
   float: right;
   width: 30%;
   background-color: #81abbc;
-  padding: 0px;
+  padding: 20px;
 }
 
 /* Div flexbox container for article overviews to sit in */
@@ -48,6 +48,7 @@ h3 {
   border: #fbd2c9, solid, 5px;
   width: 200px;
   margin: 10px;
+  align-self: stretch;
 }
 
 /* Center images and make sure they keep their aspect ratio while fitting
