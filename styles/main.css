@@ -24,6 +24,25 @@ h3 {
   font-size: 1.4vw;
 }
 
+table,
+th,
+td {
+  background-color: #fbd2c9;
+  border: 2px solid;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 10px;
+}
+
+table {
+  width: 80%;
+}
+
+th {
+  text-align: center;
+  width: 50%;
+}
+
 p,
 li {
   font-weight: 400;
@@ -111,11 +130,11 @@ a:hover {
 }
 
 /* widescreen displays */
-@media only screen and (min-width: 920px) {
+/* @media only screen and (min-width: 920px) {
   .container {
-    /* some layout rules */
+    
   }
-}
+} */
 
 /* tablets */
 @media only screen and (max-width: 919px) {

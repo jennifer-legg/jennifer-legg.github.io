@@ -3,8 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
     <title>HTML and CSS</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <h1>Technical blog - CSS & HTML</h1>
+      <h2>When should I use a class or an ID?</h2>
+      <p>
+        Summary: Best practice is to use classes with CSS and IDs as hooks for Javascript. 
+
+        <table>
+          <caption>Classes vs ID</caption>
+          <tr>
+            <th>Class</th>
+            <th>ID</th>
+          </tr>
+          <tr>
+            <td>Can be applied to multiple HTML elements</td>
+            <td>Unique - can only be applied to one element</td>
+          </tr>
+          <tr>
+            <td>Multiple classes can be applied to the same element</td>
+            <td>Only one ID can be applied to an element</td>
+          </tr>
+          <tr>
+            <td>Give an adjective as a name eg. bold-text</td>
+            <td>Give a noun as a name eg. footer or head-nav</td>
+          </tr>
+          <tr>
+            <td>Cannot be used as URL navigation</td>
+            <td>Can be used as the URL in an anchor to navigate to a particular section of a page</td>
+          </tr>
+          <tr>
+            <td>CSS rules take precedence (have specificity) over elements</td>
+            <td>CSS rules take precedence (have specificity) over classes and elements</td>
+          </tr>
+
+        </table>
+      </p>
+      
+    </div>
+  </body>
 </html>
