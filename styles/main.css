@@ -36,6 +36,8 @@ td {
 
 table {
   width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 th {
@@ -49,14 +51,14 @@ li {
   font-size: 1.2vw;
 }
 
-/* Full page grid container */
-.container-all {
+/* Full page grid container index page*/
+.page-container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 1fr 12fr;
 }
 
-/* Introduction sits to right of screen beneath nav bar */
+/* Introduction sits to right of screen beneath nav bar index page */
 .intro-about-me {
   grid-column: 3 / 4;
   grid-row: 2 / 13;
@@ -64,7 +66,7 @@ li {
   padding: 20px;
 }
 
-/* Div flexbox container for article overviews to sit in */
+/* Div flexbox container for article overviews to sit in index page */
 .article-container {
   grid-column: 2 / 3;
   grid-row: 2 / 13;
@@ -76,7 +78,7 @@ li {
   align-content: flex-start;
 }
 
-/* set size/color of article overview box */
+/* set size/color of article overview box index page */
 .article {
   background-color: #81abbc;
   border: #fbd2c9, solid, 5px;
@@ -84,6 +86,15 @@ li {
   align-self: stretch;
   padding: 20px;
   max-width: 250px;
+}
+
+/* Container for post on blog pages */
+.blog-container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 13;
+  background-color: #81abbc;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
 }
 
 /* Center images and make sure they keep their aspect ratio while fitting
@@ -138,7 +149,7 @@ a:hover {
 
 /* tablets */
 @media only screen and (max-width: 919px) {
-  .container-all {
+  .page-container {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 20fr;
@@ -202,7 +213,7 @@ a:hover {
 
 /* phones */
 @media only screen and (max-width: 400px) {
-  .container-all {
+  .page-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 20fr;
@@ -219,6 +230,14 @@ a:hover {
 
   .intro-about-me {
     display: none;
+  }
+
+  .blog-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 21;
+    background-color: #81abbc;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
   }
 
   .top-posts {
