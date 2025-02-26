@@ -57,6 +57,13 @@ ol {
   padding-left: 20px;
 }
 
+.dark-border {
+  border: 5px solid #313e61;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* Full page grid container index page*/
 .page-container {
   display: grid;
@@ -102,6 +109,13 @@ ol {
   background-color: #81abbc;
   padding: 0px 20px 0px 20px;
   text-align: center;
+}
+
+/* Sets line height etc for text blocks in blog posts */
+.blog-container p {
+  line-height: 1.5;
+  text-indent: 5%;
+  text-align: left;
 }
 
 /* Center images and make sure they keep their aspect ratio while fitting
