@@ -1,8 +1,10 @@
 :root {
   --base-dark: #313e61;
-  --base-light: #81abbc;
+  --base-mid: #81abbc;
+  --base-light: #b4cdd7;
   --accent-dark: #774a62;
-  --accent-light: #fbd2c9;
+  --accent-mid: #fbd2c9;
+  --accent-light: #fef0ee;
 }
 
 body {
@@ -10,7 +12,7 @@ body {
   color: var(--base-dark);
   font-family: 'Archivo', serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
   box-sizing: border-box;
@@ -43,9 +45,10 @@ h4 {
 p,
 li,
 table {
-  font-weight: 350;
+  font-weight: 450;
   font-size: 1.2vw;
   text-align: left;
+  line-height: 1.5;
 }
 
 table,
@@ -92,7 +95,7 @@ ol {
 #introduction-box {
   grid-column: 3 / 4;
   grid-row: 2 / 13;
-  background-color: var(--base-light);
+  background-color: var(--base-mid);
   padding: 20px;
 }
 
@@ -110,8 +113,8 @@ ol {
 
 /* set size/color of article overview box index page */
 .article {
-  background-color: var(--base-light);
-  border: var(--accent-light) solid 5px;
+  background-color: var(--base-mid);
+  border: var(--accent-mid) solid 5px;
   margin: 10px;
   align-self: stretch;
   padding: 20px;
@@ -127,14 +130,8 @@ ol {
 }
 
 /* Sets line height etc for text blocks in blog posts */
-#blog-container p {
-  line-height: 1.5;
+.long-text {
   text-indent: 5%;
-}
-
-#blog-container li {
-  line-height: 1.5;
-  text-indent: none;
 }
 
 /* Center images and make sure they keep their aspect ratio while fitting
@@ -148,8 +145,10 @@ inside set width & height */
 }
 
 .small-img {
-  width: 250px;
+  max-width: 350px;
   float: right;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .stay-below {
@@ -161,7 +160,7 @@ inside set width & height */
 #top-post-box {
   grid-column: 1 / 2;
   grid-row: 2 / 13;
-  background-color: var(--base-light);
+  background-color: var(--base-mid);
   padding: 20px;
 }
 
@@ -178,8 +177,8 @@ inside set width & height */
   display: none;
 }
 
-a {
-  background-color: var(--accent-light);
+.pale-rectangle-link {
+  background-color: var(--accent-mid);
   padding: 10px;
   margin: 10px;
   width: 150px;
@@ -187,6 +186,7 @@ a {
   text-decoration: none;
   float: left;
   font-size: 1.5vw;
+  font-weight: 500px;
 }
 
 a:hover {
@@ -213,10 +213,6 @@ a:hover {
     grid-row: 2 / 3;
   }
 
-  .article {
-    max-width: 250px;
-  }
-
   #introduction-box {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -225,25 +221,31 @@ a:hover {
   #top-post-box {
     display: none;
   }
+
   #navbar {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
     padding: 2px;
   }
 
-  a {
-    background-color: var(--accent-light);
-    padding: 5px;
-    margin: 5px;
-    width: 150px;
-    color: var(--accent-dark);
-    text-decoration: none;
-    float: left;
-    font-size: 20px;
+  #blog-container {
+    grid-column: 1 / 3;
+    grid-row: 2 / 21;
   }
 
-  p {
-    font-size: 2.3vw;
+  table {
+    width: 90%;
+  }
+
+  td,
+  th {
+    font-size: 2.5vw;
+  }
+
+  p,
+  td,
+  th {
+    font-size: 3vw;
   }
 
   h1 {
@@ -261,6 +263,21 @@ a:hover {
   .article-img {
     width: 250px;
     height: 250px;
+  }
+
+  .pale-rectangle-link {
+    background-color: var(--accent-mid);
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+    color: var(--accent-dark);
+    text-decoration: none;
+    float: left;
+    font-size: 20px;
+  }
+
+  .article {
+    max-width: 250px;
   }
 }
 
@@ -288,7 +305,7 @@ a:hover {
   #blog-container {
     grid-column: 1 / 2;
     grid-row: 2 / 21;
-    background-color: var(--base-light);
+    background-color: var(--base-mid);
     padding: 0px 20px 0px 20px;
   }
 
@@ -301,16 +318,16 @@ a:hover {
     padding: 2px;
   }
 
-  a {
-    background-color: var(--accent-light);
+  .pale-rectangle-link {
+    background-color: var(--accent-mid);
     padding: 5px;
     margin: 5px;
-    width: 60px;
+    width: 80px;
     color: var(--accent-dark);
     text-decoration: none;
     text-align: left;
     float: left;
-    font-size: 10px;
+    font-size: 4vw;
   }
   /* Remove horizontal menu */
   .horizontal-menu {
@@ -326,7 +343,7 @@ a:hover {
 
   /* Style dropdown button */
   .dropdown-button {
-    background-color: var(--accent-light);
+    background-color: var(--accent-mid);
     padding: 5px;
     margin: none;
     min-width: 100px;
@@ -334,6 +351,7 @@ a:hover {
     text-align: center;
     outline: none;
     border: none;
+    font-size: 4vw;
   }
 
   .dropdown-links {
@@ -352,6 +370,9 @@ a:hover {
     margin: 0px;
     padding: 5px 0px 5px 0px;
     background-color: var(--accent-light);
+    text-decoration: none;
+    color: #774a62;
+    font-size: 4vw;
   }
 
   .dropdown-menu:hover .dropdown-links {
@@ -359,23 +380,32 @@ a:hover {
   }
 
   p {
-    font-size: 3vw;
-  }
-
-  h1 {
-    font-size: 6vw;
-  }
-
-  h2 {
     font-size: 4vw;
   }
 
+  h1 {
+    font-size: 5.5vw;
+  }
+
+  h2 {
+    font-size: 5vw;
+  }
+
   h3 {
+    font-size: 5vw;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td,
+  th {
     font-size: 3.5vw;
   }
 
   .article-img {
-    width: 100px;
+    width: 80px;
     height: 100px;
   }
 }
