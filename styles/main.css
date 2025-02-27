@@ -379,7 +379,8 @@ a:hover {
     display: block;
   }
 
-  p {
+  p,
+  li {
     font-size: 4vw;
   }
 
@@ -405,7 +406,14 @@ a:hover {
   }
 
   .article-img {
-    width: 80px;
+    width: 100px;
     height: 100px;
+  }
+
+  .small-img {
+    max-width: 300px;
+    height: auto;
+    float: none;
+    text-align: center;
   }
 }
