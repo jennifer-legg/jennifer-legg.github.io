@@ -147,6 +147,17 @@ inside set width & height */
   object-fit: contain;
 }
 
+.small-img {
+  width: 250px;
+  float: right;
+}
+
+.stay-below {
+  clear: right;
+  padding-top: 20px;
+  text-indent: initial;
+}
+
 #top-post-box {
   grid-column: 1 / 2;
   grid-row: 2 / 13;
@@ -158,8 +169,6 @@ inside set width & height */
   grid-column: 1 / 4;
   grid-row: 1 / 2;
   background-color: var(--accent-dark);
-  width: 100%;
-  font-weight: 500;
   position: sticky;
   top: 0;
   align-content: center;

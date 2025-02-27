@@ -24,35 +24,51 @@
       
       <div id="blog-container">
       <h1>Technical blog - CSS & HTML</h1>
-      <h2>When should I use a class or an ID?</h2>
+      <h2>When should I use a class or an ID with CSS?</h2>
       <p>
-        Summary: Best practice is to use classes with CSS and IDs as hooks for Javascript. 
+        Choosing to use an id or a class with CSS is linked to the <em>purpose</em> of the CSS you're about to add. 
+      </p>
 
+      <div>
+        <img class="small-img" src="../images/css-class-example.jpg" alt="Example of class in css">
+        <p>
+          Is the CSS going to be applied multiple times to different parts of your website or of your page? For example, will you be
+          applying a border with particular margins and/or padding to multiple solid blocks of text? <strong>Use a class, defined with a period (.)</strong> <br>
+        </p>
+      </div>
+      
+      <div class="stay-below">
+        <img class="small-img" src="../images/css-id-example.jpg" alt="Example of id in CSS">
+        <p>Is the CSS structural? For example, are you setting up a grid or flexbox layout and defining where a unique part of the page such as a navigation bar is going 
+          to be placed within that structure? Is this the only place on the page you'll be using that CSS? <strong>Use an id, defined with a hashtag (#)</strong> <br>       
+        </p>  
+      </div>
+
+      <p>The table below compares the differences between classes and ids.</p>
         <table>
-          <caption>Classes vs ID</caption>
           <tr>
-            <th>Class</th>
-            <th>ID</th>
+            <th>class</th>
+            <th>id</th>
           </tr>
           <tr>
             <td>Can be applied to multiple HTML elements</td>
-            <td>Unique - can only be applied to one element</td>
+            <td>Can only be applied to one HTML element</td>
           </tr>
           <tr>
-            <td>Multiple classes can be applied to the same element</td>
-            <td>Only one ID can be applied to an element</td>
+            <td>Multiple classes can be applied to the same HTML element</td>
+            <td>Only one id can be applied to the HTML element</td>
           </tr>
           <tr>
-            <td>Give an adjective as a name eg. bold-text</td>
-            <td>Give a noun as a name eg. footer or head-nav</td>
+            <td>Should be given an adjective as a name eg. bold-text</td>
+            <td>Should be given a noun as a name eg. footer or head-nav</td>
           </tr>
           <tr>
             <td>Cannot be used as URL navigation</td>
             <td>Can be used as the URL in an anchor to navigate to a particular section of a page</td>
           </tr>
           <tr>
-            <td>CSS rules take precedence (have specificity) over elements</td>
-            <td>CSS rules take precedence (have specificity) over classes and elements</td>
+            <td>A CSS rule applied to a class will overrule CSS rules applied to standard html elements (e.g. div)</td>
+            <td>A CSS rule applied to an id will overrule CSS rules applied to classes as well as to standard html elements</td>
           </tr>
 
         </table>
