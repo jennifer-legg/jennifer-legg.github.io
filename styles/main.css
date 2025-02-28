@@ -16,6 +16,7 @@ body {
   font-style: normal;
   font-variation-settings: 'wdth' 100;
   box-sizing: border-box;
+  margin: 0px;
 }
 
 h1 {
@@ -77,24 +78,17 @@ ol {
   padding-left: 20px;
 }
 
-.dark-border {
-  border: 5px solid var(--base-dark);
-  margin: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 /* Full page grid container index page*/
 #page-container {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 1fr 12fr;
+  grid-template-rows: auto auto;
 }
 
 /* Introduction sits to right of screen beneath nav bar index page */
 #introduction-box {
   grid-column: 3 / 4;
-  grid-row: 2 / 13;
+  grid-row: 2 / 3;
   background-color: var(--base-mid);
   padding: 20px;
 }
@@ -102,13 +96,21 @@ ol {
 /* Div flexbox container for article overviews to sit in index page */
 #article-container {
   grid-column: 2 / 3;
-  grid-row: 2 / 13;
+  grid-row: 2 / 3;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
   align-content: flex-start;
+}
+
+/* Container for post on blog pages */
+#blog-container {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: var(--base-light);
+  padding: 0px 20px 0px 20px;
 }
 
 /* set size/color of article overview box index page */
@@ -119,14 +121,6 @@ ol {
   align-self: stretch;
   padding: 20px;
   width: 250px;
-}
-
-/* Container for post on blog pages */
-#blog-container {
-  grid-column: 2 / 3;
-  grid-row: 2 / 13;
-  background-color: var(--base-light);
-  padding: 0px 20px 0px 20px;
 }
 
 /* Sets line height etc for text blocks in blog posts */
@@ -193,19 +187,49 @@ a:hover {
   background-color: var(--base-light);
 }
 
+.dark-border {
+  border: 5px solid var(--base-dark);
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* widescreen displays */
-/* @media only screen and (min-width: 920px) {
-  .container {
-    
+@media only screen and (min-width: 920px) {
+  #page-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+    grid-template-rows: auto auto;
   }
-} */
+
+  #introduction-box {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+  }
+
+  #article-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #blog-container {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    padding: 0px 40px 0px 40px;
+  }
+  #navbar {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    padding: 5px;
+  }
+}
 
 /* tablets */
 @media only screen and (max-width: 919px) {
   #page-container {
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 20fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
   }
 
   #article-container {
@@ -244,12 +268,13 @@ a:hover {
 
   p,
   td,
-  th {
-    font-size: 3vw;
+  th,
+  li {
+    font-size: 2.5vw;
   }
 
   h1 {
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
 
   h2 {
@@ -258,6 +283,11 @@ a:hover {
 
   h3 {
     font-size: 3vw;
+  }
+
+  h4 {
+    font-size: 2.5vw;
+    font-weight: 500;
   }
 
   .article-img {
@@ -273,11 +303,19 @@ a:hover {
     color: var(--accent-dark);
     text-decoration: none;
     float: left;
-    font-size: 20px;
+    font-size: 3vw;
+    font-weight: 400;
   }
 
   .article {
     max-width: 250px;
+  }
+
+  .dark-border {
+    border: 2px solid var(--base-dark);
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -286,12 +324,18 @@ a:hover {
   #page-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 20fr;
+    grid-template-rows: auto auto;
+  }
+
+  #navbar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 5px;
   }
 
   #article-container {
     grid-column: 1 / 2;
-    grid-row: 2 / 4;
+    grid-row: 2 / 3;
   }
 
   .article {
@@ -304,24 +348,18 @@ a:hover {
 
   #blog-container {
     grid-column: 1 / 2;
-    grid-row: 2 / 21;
-    background-color: var(--base-mid);
+    grid-row: 2 / 3;
     padding: 0px 20px 0px 20px;
   }
 
   #top-post-box {
     display: none;
   }
-  #navbar {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    padding: 2px;
-  }
 
   .pale-rectangle-link {
     background-color: var(--accent-mid);
     padding: 5px;
-    margin: 5px;
+    margin: 0px;
     width: 80px;
     color: var(--accent-dark);
     text-decoration: none;
@@ -371,7 +409,7 @@ a:hover {
     padding: 5px 0px 5px 0px;
     background-color: var(--accent-light);
     text-decoration: none;
-    color: #774a62;
+    color: var(--accent-dark);
     font-size: 4vw;
   }
 
@@ -385,15 +423,15 @@ a:hover {
   }
 
   h1 {
-    font-size: 5.5vw;
+    font-size: 5vw;
   }
 
   h2 {
-    font-size: 5vw;
+    font-size: 4.7vw;
   }
 
   h3 {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 
   table {
@@ -415,5 +453,12 @@ a:hover {
     height: auto;
     float: none;
     text-align: center;
+  }
+
+  .dark-border {
+    border: 2px solid var(--base-dark);
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
