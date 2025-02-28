@@ -121,6 +121,7 @@ ol {
   align-self: stretch;
   padding: 20px;
   width: 250px;
+  box-shadow: 8px 8px 5px #1d253a;
 }
 
 /* Sets line height etc for text blocks in blog posts */
