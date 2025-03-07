@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>JS Fundamentals</title>
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="navbar">
+        <div class="horizontal-menu">
+          <a class="pale-rectangle-link" href="../index.html">Home</a>
+          <a class="pale-rectangle-link" href="#">Blog articles</a>
+          <a class="pale-rectangle-link" href="#">About me</a>
+        </div>
+
+        <div class="dropdown-menu">
+          <button class="dropdown-button">Menu</button>
+          <div class="dropdown-links">
+            <a href="../index.html">Home</a>
+            <a href="#">Blog articles</a>
+            <a href="#">About me</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="blog-container">
+        <h1>Technical blog - JS Fundamentals</h1>
+        <h2>HTML, CSS, Javascript and the DOM - a super condensed summary</h2>
+        <div>
+          HTML, CSS and javascript are all used on a website for different
+          purposes. HTML creates the content (what text, headings, images and
+          links should be on the page) and CSS controls the layout and design.
+          Javascript manipulates the website, changing the HTML on the page as
+          you interact with it. Javascript is able to do so because of the
+          document object model (DOM). The DOM changes all HTML elements into
+          objects, which have functions and properties that javascript can
+          access to use to manipulate what is on the webpage. We can see behind
+          the scenes and look at what the DOM is doing (and change it ourselves
+          in real time!) with browser developer tools.
+        </div>
+        <h2>ClickyButton!</h2>
+
+        <div>
+          <img
+            class="small-img"
+            src="../images/clicky-button-HTML.png"
+            alt="HTML code for clickyButton"
+          />
+          This html code is for the button below. As you can see, the white code
+          is what the button element says on it (Click).
+          <br />
+          The writing after the green id= (clickyButton) is a unique name for
+          this button. No other buttons or any other items on this website are
+          called clickyButton. <br />
+          The code after the class= (black-button) is used to make the button
+          good with CSS. Many buttons or other items can have the same class and
+          look like black-button.
+        </div>
+
+        <div class="stay-below">
+          <img
+            class="small-img"
+            src="../images/CSS-black-button.png"
+            alt="CSS black-button class"
+          />
+          This is the CSS which decides how the button looks. It sets the button
+          to have a black background and blue foreground (blue text).
+        </div>
+
+        <div class="stay-below">
+          Now lets look at Javascript, so that the button will do something!
+          When your browser loads the webpage, the whole page is turned into a
+          document object model so that javascript can interact with the HTML
+          and change things. We can use javascript with clickyButton’s id to
+          find clickyButton in the document object. The DOM provides us with a
+          document
+          <a href="#explain-function">function</a> named getElementById which we
+          can use for this.
+          <span>document.getElementById(“clickyButton”)</span>
+        </div>
+        <div class="stay-below">
+          We only want the button to do something if we click on it and we can
+          to use the onclick() function for this
+          <span
+            >document.getElementById('clickyButton').onclick = (e) =>
+            doThisFunction('clickyButton')</span
+          >
+          Now when we click the button, clickyButton will call and run the
+          doThisFunction(). Read all about the doThisFunction below, then decide
+          whether you want to click it.
+        </div>
+        <div class="centered-box">
+          <button id="clickyButton" class="black-button">
+            Click here to see what happens
+          </button>
+        </div>
+        <h2>Functions</h2>
+        <div id="explain-function">
+          Below is the doThisFunction. Functions are (mostly) self-contained.
+          They are useful because they can simplify code. The same function can
+          be called (used) multiple times. For example, I could use this
+          function with different buttons so that they all do the same thing.
+          You can send information into a function through the argument () and
+          you can return information.
+        </div>
+      </div>
+    </div>
+    <script>
+      const scaryAudio = new Audio('../audio/alarm-audio.mp3')
+
+      document.getElementById('clickyButton').onclick = (e) =>
+        annihilate('clickyButton')
+
+      function annihilate(button) {
+        document.getElementById(button).innerHTML =
+          'Stand by for world annihilation... loading...'
+        document
+          .getElementById(button)
+          .classList.replace('black-button', 'danger-button')
+        alert(
+          'WHY DID YOU CLICK IT! SOMEONE ALWAYS HAS TO BE THE SMART ASS AND CLICK THE BUTTON'
+        )
+        scaryAudio.loop = true
+        scaryAudio.play()
+      }
+    </script>
+  </body>
+</html>

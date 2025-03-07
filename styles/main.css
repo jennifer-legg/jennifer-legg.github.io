@@ -78,6 +78,33 @@ ol {
   padding-left: 20px;
 }
 
+.black-button {
+  background-color: black;
+  color: blue;
+  font-weight: 500;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  max-width: 200px;
+  margin: auto;
+}
+
+.danger-button {
+  background-color: red;
+  color: yellow;
+  font-size: 3vw;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  max-width: 400px;
+  margin: auto;
+}
+
+.centered-box {
+  text-align: center;
+  padding: 20px;
+}
+
 /* Full page grid container index page*/
 #page-container {
   display: grid;
