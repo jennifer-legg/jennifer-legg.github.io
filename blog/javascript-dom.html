@@ -32,105 +32,176 @@
       </div>
 
       <div id="blog-container">
-        <h1>Technical blog - JS Fundamentals</h1>
-        <h2>HTML, CSS, Javascript and the DOM - a super condensed summary</h2>
-        <div>
-          HTML, CSS and javascript are all used on a website for different
-          purposes. HTML creates the content (what text, headings, images and
-          links should be on the page) and CSS controls the layout and design.
-          Javascript manipulates the website, changing the HTML on the page as
-          you interact with it. Javascript is able to do so because of the
-          document object model (DOM). The DOM changes all HTML elements into
-          objects, which have functions and properties that javascript can
-          access to use to manipulate what is on the webpage. We can see behind
-          the scenes and look at what the DOM is doing (and change it ourselves
-          in real time!) with browser developer tools.
+        <div class="dark-border">
+          <h1>Technical blog - JS Fundamentals</h1>
+          <h2>HTML, CSS, Javascript and the DOM - a super condensed summary</h2>
+          <p>
+            HTML, CSS and javascript are all used on a website for different
+            purposes. HTML creates the content (what text, headings, images and
+            links should be on the page) and CSS controls the layout and design.
+            Javascript manipulates the website, changing the HTML on the page as
+            you interact with it. Javascript is able to do so because of the
+            document object model (DOM). The DOM changes all HTML elements into
+            objects, which have functions and properties that javascript can
+            access to use to manipulate what is on the webpage. We can see
+            behind the scenes and look at what the DOM is doing (and change it
+            ourselves in real time!) with browser developer tools.
+          </p>
         </div>
-        <h2>ClickyButton!</h2>
-
-        <div>
+        <div class="dark-border">
+          <h2>ClickyButton!</h2>
           <img
             class="small-img"
             src="../images/clicky-button-HTML.png"
             alt="HTML code for clickyButton"
           />
-          This html code is for the button below. As you can see, the white code
-          is what the button element says on it (Click).
-          <br />
-          The writing after the green id= (clickyButton) is a unique name for
-          this button. No other buttons or any other items on this website are
-          called clickyButton. <br />
-          The code after the class= (black-button) is used to make the button
-          good with CSS. Many buttons or other items can have the same class and
-          look like black-button.
-        </div>
-
-        <div class="stay-below">
+          <p>
+            This html code is for the button below. As you can see, the white
+            code is what the button element says on it (Click).
+            <br />
+            The writing after the green id= (clickyButton) is a unique name for
+            this button. No other buttons or any other items on this website are
+            called clickyButton. <br />
+            The code after the class= (black-button) is to make the button look
+            nice with CSS. Many buttons or other items can have the same class
+            and look like black-button.
+          </p>
           <img
             class="small-img"
-            src="../images/CSS-black-button.png"
+            src="../images/css-black-button.png"
             alt="CSS black-button class"
           />
-          This is the CSS which decides how the button looks. It sets the button
-          to have a black background and blue foreground (blue text).
-        </div>
-
-        <div class="stay-below">
-          Now lets look at Javascript, so that the button will do something!
-          When your browser loads the webpage, the whole page is turned into a
-          document object model so that javascript can interact with the HTML
-          and change things. We can use javascript with clickyButton’s id to
-          find clickyButton in the document object. The DOM provides us with a
-          document
-          <a href="#explain-function">function</a> named getElementById which we
-          can use for this.
-          <span>document.getElementById(“clickyButton”)</span>
-        </div>
-        <div class="stay-below">
-          We only want the button to do something if we click on it and we can
-          to use the onclick() function for this
-          <span
-            >document.getElementById('clickyButton').onclick = (e) =>
-            doThisFunction('clickyButton')</span
-          >
-          Now when we click the button, clickyButton will call and run the
-          doThisFunction(). Read all about the doThisFunction below, then decide
-          whether you want to click it.
+          <p>
+            This is the CSS which decides how the button looks. It sets the
+            button to have a black background and blue foreground (blue text).
+          </p>
+          <p class="stay-below">
+            Now lets look at Javascript, so that the button will do something!
+            When your browser loads the webpage, the whole page is turned into a
+            document object model so that javascript can interact with the HTML
+            and change things. We can use javascript with clickyButton’s id to
+            find clickyButton in the document object. The DOM provides us with a
+            document <a href="#explain-function">function</a> named
+            getElementById which we can use for this. We only want the button to
+            do something if we click on it and we can to use the onclick()
+            function for this
+          </p>
+          <p class="black-background">
+            <span class="light-blue-text">document</span>
+            <span class="yellow-text">.getElementById</span>
+            <span class="white-text">(</span>
+            <span class="orange-text">'clickyButton'</span
+            ><span class="white-text">)</span
+            ><span class="yellow-text">.onclick</span>
+            <span class="white-text"> = (</span>
+            <span class="light-blue-text">e</span
+            ><span class="white-text">)</span
+            ><span class="blue-text"> => </span>
+            <span class="yellow-text">doThisFunction</span
+            ><span class="white-text">(</span
+            ><span class="orange-text">'clickyButton'</span
+            ><span class="white-text">)</span>
+          </p>
+          <p>
+            Now when we click the button, clickyButton will call and run the
+            doThisFunction(). Read all about the doThisFunction below, then
+            decide whether you want to click it.
+          </p>
         </div>
         <div class="centered-box">
           <button id="clickyButton" class="black-button">
-            Click here to see what happens
+            I'm a clickyButton! Should you click me?
           </button>
         </div>
-        <h2>Functions</h2>
-        <div id="explain-function">
-          Below is the doThisFunction. Functions are (mostly) self-contained.
-          They are useful because they can simplify code. The same function can
-          be called (used) multiple times. For example, I could use this
-          function with different buttons so that they all do the same thing.
-          You can send information into a function through the argument () and
-          you can return information.
+        <div class="dark-border">
+          <h2>doThisFunction(buttonId)</h2>
+          <img
+            class="medium-img"
+            src="../images/javascript-doThisFunction.png"
+            alt="code for doThisFunction()"
+          />
+          <p>
+            This is the code for doThisFunction(buttonId). To work, it needs an
+            argument of a String of the id for the button. It also needs a
+            globally declared audio Object with the name scaryAudio. The code
+            sets out that innerHTML will replace the text on the button.
+            Computers read code from the top down, calling each function as they
+            go, then action it, unless this is changed by conditionals or loops.
+            This is called
+            <a href="#controlFlow">control flow</a>. Therefore in the
+            doThisFunction, the button will never say "Hello, this is a pretty
+            flower!" because the computer immediately replaces that direction
+            with "Stand by for world annihilation..." before the command is
+            actioned. Sooooo... do you think you should press the button?
+          </p>
+        </div>
+        <div class="dark-border stay-below" id="explain-function">
+          <h2>Functions</h2>
+          <p>
+            Functions are (mostly) self-contained code that do one thing. They
+            can take in information through the argument (the brackets after the
+            name of the function), and can return information to the rest of the
+            code. They can also access global variables (variables declared
+            outside of the rest of the functions). Functions are useful because
+            they simplify code by decreasing repetition. For example, I could
+            use this function with different buttons so that they all do the
+            same thing. As functions are mostly self contained, they can help
+            you narrow down where any problems are.
+          </p>
+        </div>
+        <div class="dark-border" id="controlFlow">
+          <h2>Control flow, conditionals and loops</h2>
+          <p>
+            <img
+              class="small-img"
+              src="../images/if-statement.png"
+              alt="if/else statement example"
+            />
+            When a computer reads a piece of code, it starts at the top of the
+            document and works its way down, line by line, to the bottom,
+            <strong>except</strong> when we change the order by putting
+            functions or loops or conditionals. When a function is called, the
+            computer will down the document to that function and read it, line
+            by line, then go back up to where it was before. We can tell the
+            computer to skip bits of code with conditionals such as 'if/else'
+            statements. Conditionals are options for the computer based on what
+            is true or false. This morning, I told my daughter that if she put
+            on her clothes, I'd let her watch TV. If not, she would go straight
+            to breakfast in her pjs without watching TV . She put on her
+            clothes, at which point the if statement was true and we watched TV.
+            The else was skipped because the if was true.
+          </p>
+          <p>
+            Loops also control the flow of a computer reading code. They tell a
+            computer to do one particular thing over and over again until it has
+            completed that thing a designated amount of times. For loops are
+            extremely useful in accessing the information in arrays, because the
+            items in an array are accessed by their index number. For..in loops
+            are used the same way to access information in an object.
+          </p>
         </div>
       </div>
     </div>
-    <script>
-      const scaryAudio = new Audio('../audio/alarm-audio.mp3')
-
-      document.getElementById('clickyButton').onclick = (e) =>
-        annihilate('clickyButton')
-
-      function annihilate(button) {
-        document.getElementById(button).innerHTML =
-          'Stand by for world annihilation... loading...'
-        document
-          .getElementById(button)
-          .classList.replace('black-button', 'danger-button')
-        alert(
-          'WHY DID YOU CLICK IT! SOMEONE ALWAYS HAS TO BE THE SMART ASS AND CLICK THE BUTTON'
-        )
-        scaryAudio.loop = true
-        scaryAudio.play()
-      }
-    </script>
   </body>
+  <script>
+    const scaryAudio = new Audio('../audio/alarm-audio.mp3')
+
+    document.getElementById('clickyButton').onclick = (e) =>
+      doThisFunction('clickyButton')
+
+    function doThisFunction(buttonId) {
+      document.getElementById(buttonId).innerHTML =
+        'Hello, that is a pretty flower!'
+      document.getElementById(buttonId).innerHTML =
+        'Stand by for world annihilation...'
+      document
+        .getElementById(buttonId)
+        .classList.replace('black-button', 'danger-button')
+      alert(
+        'WHY DID YOU CLICK IT? SOMEONE ALWAYS HAS TO BE THE SMART ASS AND CLICK THE BUTTON'
+      )
+      scaryAudio.loop = true
+      scaryAudio.play()
+    }
+  </script>
 </html>
