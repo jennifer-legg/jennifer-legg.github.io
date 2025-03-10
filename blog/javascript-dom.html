@@ -83,25 +83,14 @@
             find clickyButton in the document object. The DOM provides us with a
             document <a href="#explain-function">function</a> named
             getElementById which we can use for this. We only want the button to
-            do something if we click on it and we can to use the onclick()
-            function for this
+            do something if we click on it. We can use the onclick() function
+            for this.
           </p>
-          <p class="black-background">
-            <span class="light-blue-text">document</span>
-            <span class="yellow-text">.getElementById</span>
-            <span class="white-text">(</span>
-            <span class="orange-text">'clickyButton'</span
-            ><span class="white-text">)</span
-            ><span class="yellow-text">.onclick</span>
-            <span class="white-text"> = (</span>
-            <span class="light-blue-text">e</span
-            ><span class="white-text">)</span
-            ><span class="blue-text"> => </span>
-            <span class="yellow-text">doThisFunction</span
-            ><span class="white-text">(</span
-            ><span class="orange-text">'clickyButton'</span
-            ><span class="white-text">)</span>
-          </p>
+          <img
+            class="medium-img"
+            src="../images/calling-the-doThisFunction.png"
+            alt="code to call the doThisFunction() when clickyButton clicks"
+          />
           <p>
             Now when we click the button, clickyButton will call and run the
             doThisFunction(). Read all about the doThisFunction below, then
@@ -129,10 +118,10 @@
             go, then action it, unless this is changed by conditionals or loops.
             This is called
             <a href="#controlFlow">control flow</a>. Therefore in the
-            doThisFunction, the button will never say "Hello, this is a pretty
-            flower!" because the computer immediately replaces that direction
-            with "Stand by for world annihilation..." before the command is
-            actioned. Sooooo... do you think you should press the button?
+            doThisFunction, we will never see that the button says "Hello, this
+            is a pretty flower!" because the computer immediately rewrites the
+            text with "Stand by for world annihilation..." before we can see it.
+            Sooooo... do you think you should press the button?
           </p>
         </div>
         <div class="dark-border stay-below" id="explain-function">
@@ -142,11 +131,11 @@
             can take in information through the argument (the brackets after the
             name of the function), and can return information to the rest of the
             code. They can also access global variables (variables declared
-            outside of the rest of the functions). Functions are useful because
-            they simplify code by decreasing repetition. For example, I could
-            use this function with different buttons so that they all do the
-            same thing. As functions are mostly self contained, they can help
-            you narrow down where any problems are.
+            outside of functions). Functions are useful because they simplify
+            code by decreasing repetition. For example, I could use this
+            function with different buttons so that they all do the same thing.
+            As functions are mostly self contained, they can help you narrow
+            down where any problems are.
           </p>
         </div>
         <div class="dark-border" id="controlFlow">
@@ -169,15 +158,29 @@
             on her clothes, I'd let her watch TV. If not, she would go straight
             to breakfast in her pjs without watching TV . She put on her
             clothes, at which point the if statement was true and we watched TV.
-            The else was skipped because the if was true.
+            The 'else' was skipped because the 'if' was true.
           </p>
           <p>
+            <img
+              class="small-img"
+              src="../images/for-loop.png"
+              alt="for loop example"
+            />
             Loops also control the flow of a computer reading code. They tell a
             computer to do one particular thing over and over again until it has
-            completed that thing a designated amount of times. For loops are
-            extremely useful in accessing the information in arrays, because the
-            items in an array are accessed by their index number. For..in loops
-            are used the same way to access information in an object.
+            completed that thing a designated amount of times. Compare it to the
+            why game. My daughter loves the why game. When she starts the game
+            (on initilization) my daughter is not bored. Her boredom level is at
+            0. She will get generally get bored after about 5 repetitions. So
+            while her boredom level is at less than 5, she will keep
+            looping/playing. Every time she asks 'why' she gets one level more
+            bored with the game.
+          </p>
+          <p>
+            For loops are extremely useful in accessing the information in
+            arrays, because the items in an array are accessed by their index
+            number. For..in loops are used the same way to access information in
+            an object.
           </p>
         </div>
       </div>
