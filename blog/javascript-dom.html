@@ -206,24 +206,24 @@
     </div>
   </body>
   <script>
-    const scaryAudio = new Audio('../audio/alarm-audio.mp3')
+    const scaryAudio = new Audio('../audio/alarm-audio.mp3');
 
     document.getElementById('clickyButton').onclick = (e) =>
-      doThisFunction('clickyButton')
+      doThisFunction('clickyButton');
 
     function doThisFunction(buttonId) {
       document.getElementById(buttonId).innerHTML =
-        'Hello, that is a pretty flower!'
+        'Hello, that is a pretty flower!';
       document.getElementById(buttonId).innerHTML =
-        'Stand by for world annihilation...'
+        'Stand by for world annihilation...';
       document
         .getElementById(buttonId)
-        .classList.replace('black-button', 'danger-button')
+        .classList.replace('black-button', 'danger-button');
       alert(
         'WHY DID YOU CLICK IT? SOMEONE ALWAYS HAS TO BE THE SMART ASS AND CLICK THE BUTTON'
-      )
-      scaryAudio.loop = true
-      scaryAudio.play()
+      );
+      scaryAudio.loop = true;
+      scaryAudio.play();
     }
   </script>
 </html>
