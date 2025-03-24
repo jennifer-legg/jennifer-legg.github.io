@@ -78,6 +78,10 @@ ol {
   padding-left: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .light-blue-text {
   color: lightblue;
 }
@@ -248,6 +252,7 @@ a:hover {
   border: 5px solid var(--base-dark);
   margin: 10px;
   padding-left: 20px;
+  padding-top: 10px;
   padding-right: 20px;
 }
 

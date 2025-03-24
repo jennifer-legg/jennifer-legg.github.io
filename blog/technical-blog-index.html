@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>HTML and CSS</title>
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="navbar">
+        <div class="horizontal-menu">
+          <a class="pale-rectangle-link" href="../index.html">Home</a>
+          <a
+            class="pale-rectangle-link"
+            href="../blog/technical-blog-index.html"
+            >Technical blog</a
+          >
+          <a class="pale-rectangle-link" href="../blog/human-skills-index.html"
+            >Human Skills blog</a
+          >
+        </div>
+
+        <div class="dropdown-menu">
+          <button class="dropdown-button">Menu</button>
+          <div class="dropdown-links">
+            <a href="../index.html">Home</a>
+            <a href="../blog/technical-blog-index.html">Technical</a>
+            <a href="../blog/human-skills-index.html">Human Skills</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="blog-container">
+        <div>
+          <h1>Technical Blogs</h1>
+        </div>
+        <div class="dark-border">
+          <a href="html-css.html">
+            <img
+              class="article-img"
+              src="../images/classes-vs-ids.jpg"
+              alt="Developer considering options"
+            />
+            <h3>
+              <strong>HTML and CSS: </strong>Best practices - using classes vs.
+              ids
+            </h3>
+          </a>
+        </div>
+
+        <div class="dark-border">
+          <a href="javascript-dom.html">
+            <img
+              class="article-img"
+              src="../images/js-icon.jpg"
+              alt="Javascript icon"
+            />
+            <h3><strong>JS Fundamentals: </strong>The basics of Javascript</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
