@@ -82,6 +82,84 @@ a {
   text-decoration: none;
 }
 
+/* --- Nav bar items -- */
+
+#navbar {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  background-color: var(--accent-dark);
+  position: sticky;
+  top: 0;
+  align-content: center;
+}
+
+/*Dropdown menu */
+.dropdown-menu {
+  background-color: var(--accent-mid);
+  padding: 8px;
+  margin: 10px;
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-weight: 500px;
+  float: left;
+  overflow: hidden;
+  display: block;
+}
+
+/* Style dropdown button */
+.dropdown-button {
+  background-color: var(--accent-mid);
+  margin: none;
+  min-width: 150px;
+  color: var(--accent-dark);
+  text-align: center;
+  outline: none;
+  border: none;
+  font-size: 1.5vw;
+}
+
+.dropdown-links {
+  display: none;
+  position: absolute;
+  background-color: var(--accent-dark);
+  min-width: 150px;
+  z-index: 1;
+}
+
+.dropdown-links button {
+  float: none;
+  display: block;
+  text-align: center;
+  min-width: 150px;
+  margin: 0px;
+  padding: 5px 0px 5px 0px;
+  background-color: var(--accent-light);
+  text-decoration: none;
+  color: var(--accent-dark);
+  font-size: 1.2vw;
+}
+
+.dropdown-menu:hover .dropdown-links {
+  display: block;
+}
+
+button:hover {
+  background-color: var(--base-light);
+}
+
+.pale-rectangle-link {
+  background-color: var(--accent-mid);
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  color: var(--accent-dark);
+  text-decoration: none;
+  float: left;
+  font-size: 1.5vw;
+  font-weight: 500px;
+}
+
 .light-blue-text {
   color: lightblue;
 }
@@ -219,31 +297,6 @@ inside set width & height */
   padding: 20px;
 }
 
-#navbar {
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
-  background-color: var(--accent-dark);
-  position: sticky;
-  top: 0;
-  align-content: center;
-}
-
-.dropdown-menu {
-  display: none;
-}
-
-.pale-rectangle-link {
-  background-color: var(--accent-mid);
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  color: var(--accent-dark);
-  text-decoration: none;
-  float: left;
-  font-size: 1.5vw;
-  font-weight: 500px;
-}
-
 /*--Linked image/text for technical/human skills index pages--*/
 /*container with image behind, text in front*/
 .img-backround-container {
@@ -331,7 +384,7 @@ a:hover {
 
   /*bottom right text*/
   .bottom-right {
-    width: 40%;
+    width: 60%;
     height: 10%;
   }
 }
@@ -496,54 +549,9 @@ a:hover {
     font-size: 4vw;
   }
   /* Remove horizontal menu */
-  .horizontal-menu {
+  /* .horizontal-menu {
     display: none;
-  }
-
-  /* Show dropdown menu */
-  .dropdown-menu {
-    float: right;
-    overflow: hidden;
-    display: block;
-  }
-
-  /* Style dropdown button */
-  .dropdown-button {
-    background-color: var(--accent-mid);
-    padding: 5px;
-    margin: none;
-    min-width: 100px;
-    color: var(--accent-dark);
-    text-align: center;
-    outline: none;
-    border: none;
-    font-size: 18px;
-  }
-
-  .dropdown-links {
-    display: none;
-    position: absolute;
-    background-color: var(--accent-dark);
-    min-width: 100px;
-    z-index: 1;
-  }
-
-  .dropdown-links a {
-    float: none;
-    display: block;
-    text-align: center;
-    min-width: 100px;
-    margin: 0px;
-    padding: 5px 0px 5px 0px;
-    background-color: var(--accent-light);
-    text-decoration: none;
-    color: var(--accent-dark);
-    font-size: 16px;
-  }
-
-  .dropdown-menu:hover .dropdown-links {
-    display: block;
-  }
+  } */
 
   p,
   li {
