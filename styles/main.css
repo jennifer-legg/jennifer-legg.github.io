@@ -95,22 +95,16 @@ a {
 
 /*Dropdown menu */
 .dropdown-menu {
-  background-color: var(--accent-mid);
-  padding: 8px;
-  margin: 10px;
-  color: var(--accent-dark);
-  text-decoration: none;
-  font-size: 1.5vw;
-  font-weight: 500px;
-  float: left;
   overflow: hidden;
   display: block;
+  padding: 8px;
 }
 
 /* Style dropdown button */
 .dropdown-button {
   background-color: var(--accent-mid);
-  margin: none;
+  margin: 0px;
+  padding: 0px;
   min-width: 150px;
   color: var(--accent-dark);
   text-align: center;
@@ -122,9 +116,10 @@ a {
 .dropdown-links {
   display: none;
   position: absolute;
-  background-color: var(--accent-dark);
+  background-color: var(--accent-mid);
   min-width: 150px;
   z-index: 1;
+  top: 60px;
 }
 
 .dropdown-links button {
@@ -134,10 +129,11 @@ a {
   min-width: 150px;
   margin: 0px;
   padding: 5px 0px 5px 0px;
-  background-color: var(--accent-light);
+  background-color: var(--accent-mid);
   text-decoration: none;
   color: var(--accent-dark);
   font-size: 1.2vw;
+  border: none;
 }
 
 .dropdown-menu:hover .dropdown-links {
@@ -157,7 +153,7 @@ button:hover {
   text-decoration: none;
   float: left;
   font-size: 1.5vw;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 .light-blue-text {
