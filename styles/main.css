@@ -244,6 +244,41 @@ inside set width & height */
   font-weight: 500px;
 }
 
+/*--Linked image/text for technical/human skills index pages--*/
+/*container with image behind, text in front*/
+.img-backround-container {
+  position: relative;
+  text-align: center;
+  color: var(--base-dark);
+}
+
+/*top left text*/
+.top-left {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  color: white;
+}
+
+/*bottom right text*/
+.bottom-right {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: #c1d6de;
+  width: 50%;
+  height: 10%;
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+  color: var(--base-dark);
+}
+
+/*landscape image*/
+.long-img {
+  width: 100%;
+}
+
 a:hover {
   background-color: var(--base-light);
 }
@@ -283,6 +318,7 @@ a:hover {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
     padding: 5px;
+    z-index: 1;
   }
 
   .small-img {
@@ -291,6 +327,12 @@ a:hover {
 
   .danger-button {
     max-width: 600px;
+  }
+
+  /*bottom right text*/
+  .bottom-right {
+    width: 40%;
+    height: 10%;
   }
 }
 
@@ -341,7 +383,16 @@ a:hover {
   td,
   th,
   li {
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  /*bottom right text*/
+  .bottom-right {
+    height: 10%;
+    width: 90%;
+    font-size: 16px;
+    padding: 5px;
+    background-color: var(--accent-light);
   }
 
   h1 {
@@ -546,5 +597,11 @@ a:hover {
     font-size: 25px;
     padding: 5px;
     max-width: 300px;
+  }
+
+  /*bottom right text*/
+  .bottom-right {
+    height: 30%;
+    font-size: 16px;
   }
 }
