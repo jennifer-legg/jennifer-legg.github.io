@@ -7,6 +7,8 @@
   --accent-light: #fef0ee;
 }
 
+/* -- Default font and layout settings-- */
+
 body {
   background-color: var(--base-dark);
   color: var(--base-dark);
@@ -82,7 +84,7 @@ a {
   text-decoration: none;
 }
 
-/* --- Nav bar items -- */
+/* -- Page layout settings -- */
 
 #navbar {
   grid-column: 1 / 4;
@@ -91,121 +93,6 @@ a {
   position: sticky;
   top: 0;
   align-content: center;
-}
-
-/*Dropdown menu */
-.dropdown-menu {
-  overflow: hidden;
-  display: block;
-  padding: 8px;
-}
-
-/* Style dropdown button */
-.dropdown-button {
-  background-color: var(--accent-mid);
-  margin: 0px;
-  padding: 0px;
-  min-width: 150px;
-  color: var(--accent-dark);
-  text-align: center;
-  outline: none;
-  border: none;
-  font-size: 1.5vw;
-}
-
-.dropdown-links {
-  display: none;
-  position: absolute;
-  background-color: var(--accent-mid);
-  min-width: 150px;
-  z-index: 1;
-  /* top: 60px; */
-}
-
-.dropdown-links button {
-  float: none;
-  display: block;
-  text-align: center;
-  min-width: 150px;
-  margin: 0px;
-  padding: 5px 0px 5px 0px;
-  background-color: var(--accent-mid);
-  text-decoration: none;
-  color: var(--accent-dark);
-  font-size: 1.2vw;
-  border: none;
-}
-
-.dropdown-menu:hover .dropdown-links {
-  display: block;
-}
-
-button:hover {
-  background-color: var(--base-light);
-}
-
-.pale-rectangle-link {
-  background-color: var(--accent-mid);
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-  color: var(--accent-dark);
-  text-decoration: none;
-  float: left;
-  font-size: 1.5vw;
-  font-weight: 500;
-}
-
-.light-blue-text {
-  color: lightblue;
-}
-
-.orange-text {
-  color: #ffa756;
-}
-
-.white-text {
-  color: white;
-}
-
-.blue-text {
-  color: #3384dc;
-}
-
-.yellow-text {
-  color: #ffffbf;
-}
-
-.black-background {
-  background-color: black;
-}
-
-.black-button {
-  background-color: black;
-  color: rgb(63, 152, 240);
-  font-size: 1.5vw;
-  font-weight: bolder;
-  display: block;
-  padding: 20px;
-  max-width: 300px;
-  margin: auto;
-  border: 5px double var(--accent-light);
-}
-
-.danger-button {
-  background-color: red;
-  color: yellow;
-  font-size: 3vw;
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  max-width: 400px;
-  margin: auto;
-}
-
-.centered-box {
-  text-align: center;
-  padding: 20px;
 }
 
 /* Full page grid container index page*/
@@ -223,7 +110,7 @@ button:hover {
   padding: 20px;
 }
 
-/* Div flexbox container for article overviews to sit in index page */
+/* flexbox container for article overviews to sit in index page */
 #article-container {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -243,6 +130,14 @@ button:hover {
   padding: 0px 20px 0px 20px;
 }
 
+/* Container for recent posts on index page */
+#recent-post-box {
+  grid-column: 1 / 2;
+  grid-row: 2 / 13;
+  background-color: var(--base-mid);
+  padding: 20px;
+}
+
 /* set size/color of article overview box index page */
 .article {
   background-color: var(--base-mid);
@@ -254,13 +149,105 @@ button:hover {
   box-shadow: 8px 8px 5px #1d253a;
 }
 
-/* Sets line height for text blocks in blog posts */
-.long-text {
-  text-indent: 5%;
+/*-- Dropdown menu -- */
+
+.dropdown-menu {
+  overflow: hidden;
+  display: block;
+  padding: 8px;
+}
+
+/* Style dropdown button */
+.dropdown-button {
+  background-color: var(--accent-mid);
+  margin: 0px;
+  padding: 10px;
+  width: 200px;
+  color: var(--accent-dark);
+  text-align: center;
+  outline: none;
+  border: none;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.dropdown-links {
+  display: none;
+  position: absolute;
+  background-color: var(--accent-mid);
+  width: 200px;
+  z-index: 1;
+}
+
+.dropdown-links button {
+  float: none;
+  display: block;
+  text-align: center;
+  width: 200px;
+  margin: 0px;
+  padding: 10px;
+  background-color: var(--accent-mid);
+  text-decoration: none;
+  color: var(--accent-dark);
+  font-size: 1.2vw;
+  border: none;
+}
+
+.dropdown-menu:hover .dropdown-links {
+  display: block;
+}
+
+button:hover {
+  background-color: var(--base-light);
+}
+
+/* Styling for anchor links */
+.pale-rectangle-link {
+  background-color: var(--accent-mid);
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  color: var(--accent-dark);
+  text-decoration: none;
+  float: left;
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+/*-- Styling for 'clickybutton' on js fundamental blog-- */
+
+/* Before button clicked */
+.black-button {
+  background-color: black;
+  color: rgb(63, 152, 240);
+  font-size: 1.5vw;
+  font-weight: bolder;
+  display: block;
+  padding: 20px;
+  max-width: 300px;
+  margin: auto;
+  border: 5px double var(--accent-light);
+}
+
+/* After button clicked */
+.danger-button {
+  background-color: red;
+  color: yellow;
+  font-size: 3vw;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  max-width: 400px;
+  margin: auto;
+}
+
+.centered-box {
+  text-align: center;
+  padding: 20px;
 }
 
 /* Center images and make sure they keep their aspect ratio while fitting
-inside set width & height */
+inside set width & height. Used in article overviews on index page */
 .article-img {
   display: block;
   margin: auto;
@@ -280,17 +267,11 @@ inside set width & height */
   width: 100%;
 }
 
+/* Keeps divs underneath previous div when previous div has floating elements */
 .stay-below {
   clear: right;
   padding-top: 20px;
   text-indent: initial;
-}
-
-#top-post-box {
-  grid-column: 1 / 2;
-  grid-row: 2 / 13;
-  background-color: var(--base-mid);
-  padding: 20px;
 }
 
 a:hover {
@@ -305,8 +286,9 @@ a:hover {
   padding-right: 20px;
 }
 
-/* widescreen displays */
+/*-- widescreen displays-- */
 @media only screen and (min-width: 920px) {
+  /* Setting size/layout for page sections for widescreens */
   #page-container {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr;
@@ -328,6 +310,7 @@ a:hover {
     grid-row: 2 / 3;
     padding: 0px 40px 0px 40px;
   }
+
   #navbar {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
@@ -425,14 +408,10 @@ a:hover {
   }
 
   .pale-rectangle-link {
-    background-color: var(--accent-mid);
     padding: 5px;
     margin: 5px;
     width: 150px;
-    color: var(--accent-dark);
-    text-decoration: none;
-    float: left;
-    font-size: 3vw;
+    font-size: 25px;
     font-weight: 400;
   }
 
@@ -445,6 +424,17 @@ a:hover {
     margin: 5px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  /* Style dropdown button */
+  .dropdown-button {
+    font-size: 27px;
+    width: 250px;
+  }
+
+  .dropdown-links button {
+    font-size: 25px;
+    width: 250px;
   }
 }
 
@@ -526,14 +516,9 @@ a:hover {
   }
 
   .pale-rectangle-link {
-    background-color: var(--accent-mid);
     padding: 5px;
     margin: 0px;
     max-width: 100px;
-    color: var(--accent-dark);
-    text-decoration: none;
-    text-align: left;
-    float: left;
     font-size: 18px;
   }
 
@@ -565,17 +550,17 @@ a:hover {
   .dropdown-button {
     margin: 0px;
     padding: 5px 2px 5px 2px;
-    min-width: 120px;
+    width: 130px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .dropdown-links {
-    min-width: 120px;
+    width: 130px;
   }
 
   .dropdown-links button {
-    min-width: 120px;
+    width: 130px;
     font-size: 16px;
   }
 }

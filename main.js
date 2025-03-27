@@ -8,7 +8,7 @@ let allArticles = [
     overview:
       'A foot accustomed to running over roots makes the speediest runner.',
     ahref: 'blog/te-houtaewa-template.html',
-    date: new Date(2025, 2, 24),
+    date: new Date(2010, 11, 10),
   },
   {
     type: 'technical',
@@ -62,11 +62,11 @@ let allArticles = [
   {
     type: 'humanSkills',
     image: 'images/neuroplasticity.jpg alt="Plastic brain"',
-    heading: 'Neuroplasticity',
+    heading: 'Neuro- plasticity',
     overview:
       'Looking at the malleability of our brains and the growth mindset',
     ahref: 'blog/neuroplasticity.html',
-    date: new Date(2024, 3, 25),
+    date: new Date(2025, 3, 25),
   },
   {
     type: 'technical',
@@ -74,7 +74,7 @@ let allArticles = [
     heading: 'Problem solving',
     overview: 'Techniques to conquer those pesky problems',
     ahref: 'blog/problem-solving.html',
-    date: new Date(2025, 3, 25),
+    date: new Date(2025, 3, 26),
   },
 ];
 
