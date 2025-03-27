@@ -119,7 +119,7 @@ a {
   background-color: var(--accent-mid);
   min-width: 150px;
   z-index: 1;
-  top: 60px;
+  /* top: 60px; */
 }
 
 .dropdown-links button {
@@ -254,7 +254,7 @@ button:hover {
   box-shadow: 8px 8px 5px #1d253a;
 }
 
-/* Sets line height etc for text blocks in blog posts */
+/* Sets line height for text blocks in blog posts */
 .long-text {
   text-indent: 5%;
 }
@@ -291,41 +291,6 @@ inside set width & height */
   grid-row: 2 / 13;
   background-color: var(--base-mid);
   padding: 20px;
-}
-
-/*--Linked image/text for technical/human skills index pages--*/
-/*container with image behind, text in front*/
-.img-backround-container {
-  position: relative;
-  text-align: center;
-  color: var(--base-dark);
-}
-
-/*top left text*/
-.top-left {
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  color: white;
-}
-
-/*bottom right text*/
-.bottom-right {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  background-color: #c1d6de;
-  width: 50%;
-  height: 10%;
-  margin: 0px;
-  padding: 10px;
-  text-align: center;
-  color: var(--base-dark);
-}
-
-/*landscape image*/
-.long-img {
-  width: 100%;
 }
 
 a:hover {
@@ -377,16 +342,11 @@ a:hover {
   .danger-button {
     max-width: 600px;
   }
-
-  /*bottom right text*/
-  .bottom-right {
-    width: 60%;
-    height: 10%;
-  }
 }
 
 /* tablets */
 @media only screen and (max-width: 919px) {
+  /* Setting size/layout for page sections for tablets */
   #page-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -403,14 +363,14 @@ a:hover {
     grid-row: 2 / 3;
   }
 
-  #top-post-box {
+  #recent-post-box {
     display: none;
   }
 
   #navbar {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    padding: 2px;
+    padding: 4px;
     position: static;
   }
 
@@ -423,6 +383,8 @@ a:hover {
     width: 90%;
   }
 
+  /* Setting font sizes for tablets */
+
   td,
   th {
     font-size: 16px;
@@ -432,32 +394,23 @@ a:hover {
   td,
   th,
   li {
-    font-size: 20px;
-  }
-
-  /*bottom right text*/
-  .bottom-right {
-    height: 10%;
-    width: 90%;
-    font-size: 16px;
-    padding: 5px;
-    background-color: var(--accent-light);
+    font-size: 25px;
   }
 
   h1 {
-    font-size: 4.5vw;
+    font-size: 35px;
   }
 
   h2 {
-    font-size: 3.5vw;
+    font-size: 30px;
   }
 
   h3 {
-    font-size: 3vw;
+    font-size: 25px;
   }
 
   h4 {
-    font-size: 2.5vw;
+    font-size: 30px;
     font-weight: 500;
   }
 
@@ -497,6 +450,7 @@ a:hover {
 
 /* phones */
 @media only screen and (max-width: 400px) {
+  /* Setting size/layout for page sections for phones*/
   #page-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -506,12 +460,18 @@ a:hover {
   #navbar {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    padding: 5px;
+    padding: 8px 0px 8px 8px;
   }
 
   #article-container {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+
+  #blog-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 0px 20px 0px 20px;
   }
 
   .article {
@@ -523,32 +483,11 @@ a:hover {
     display: none;
   }
 
-  #blog-container {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    padding: 0px 20px 0px 20px;
-  }
-
-  #top-post-box {
+  #recent-post-box {
     display: none;
   }
 
-  .pale-rectangle-link {
-    background-color: var(--accent-mid);
-    padding: 5px;
-    margin: 0px;
-    width: 80px;
-    color: var(--accent-dark);
-    text-decoration: none;
-    text-align: left;
-    float: left;
-    font-size: 4vw;
-  }
-  /* Remove horizontal menu */
-  /* .horizontal-menu {
-    display: none;
-  } */
-
+  /* Setting default font sizes for phones */
   p,
   li {
     font-size: 18px;
@@ -575,6 +514,7 @@ a:hover {
     font-size: 18px;
   }
 
+  /* Setting image sizes for phones */
   .article-img {
     width: 110px;
     height: 110px;
@@ -583,6 +523,18 @@ a:hover {
   .small-img {
     width: 100%;
     text-align: center;
+  }
+
+  .pale-rectangle-link {
+    background-color: var(--accent-mid);
+    padding: 5px;
+    margin: 0px;
+    max-width: 100px;
+    color: var(--accent-dark);
+    text-decoration: none;
+    text-align: left;
+    float: left;
+    font-size: 18px;
   }
 
   .dark-border {
@@ -603,9 +555,27 @@ a:hover {
     max-width: 300px;
   }
 
-  /*bottom right text*/
-  .bottom-right {
-    height: 30%;
+  /* Dropdown menu */
+  .dropdown-menu {
+    overflow: hidden;
+    display: block;
+  }
+
+  /* Style dropdown button for phones */
+  .dropdown-button {
+    margin: 0px;
+    padding: 5px 2px 5px 2px;
+    min-width: 120px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .dropdown-links {
+    min-width: 120px;
+  }
+
+  .dropdown-links button {
+    min-width: 120px;
     font-size: 16px;
   }
 }
