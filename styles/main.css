@@ -362,15 +362,21 @@ a:hover {
     grid-row: 2 / 21;
   }
 
+  /* Table settings */
+
   table {
-    width: 90%;
+    width: 100%;
+    margin: 0px;
+    table-layout: fixed;
   }
 
   /* Setting font sizes for tablets */
 
   td,
   th {
-    font-size: 16px;
+    padding: 3px;
+    margin: 0px;
+    height: auto;
   }
 
   p,
@@ -495,15 +501,6 @@ a:hover {
     font-size: 19px;
   }
 
-  table {
-    width: 100%;
-  }
-
-  td,
-  th {
-    font-size: 18px;
-  }
-
   /* Setting image sizes for phones */
   .article-img {
     width: 110px;
@@ -562,5 +559,19 @@ a:hover {
   .dropdown-links button {
     width: 130px;
     font-size: 16px;
+  }
+
+  /* Table settings */
+
+  table {
+    width: 100%;
+    padding: 0px;
+    table-layout: fixed;
+  }
+
+  td,
+  th {
+    font-size: 18px;
+    padding: 4px;
   }
 }
