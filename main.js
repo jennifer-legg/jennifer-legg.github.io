@@ -3,11 +3,12 @@
 let allArticles = [
   {
     type: 'example',
-    image: 'images/kumara.jpg alt="Holding img"',
+    image: 'images/kumara.jpg alt="Kumara"',
     heading: 'Te Houtaewa',
     overview:
       'A foot accustomed to running over roots makes the speediest runner.',
     ahref: 'blog/te-houtaewa-template.html',
+    date: new Date(2025, 2, 24),
   },
   {
     type: 'technical',
@@ -15,13 +16,7 @@ let allArticles = [
     heading: 'HTML and CSS',
     overview: 'Best practices - using classes vs. ids',
     ahref: 'blog/html-css.html',
-  },
-  {
-    type: 'technical',
-    image: 'images/problem-solving.jpg alt="Equation"',
-    heading: 'Problem solving',
-    overview: 'Techniques to conquer those pesky problems',
-    ahref: 'blog/problem-solving.html',
+    date: new Date(2025, 2, 25),
   },
   {
     type: 'humanSkills',
@@ -30,6 +25,7 @@ let allArticles = [
     heading: 'Identity, Values and Strengths Exploration',
     overview: 'A bit about me',
     ahref: 'blog/identity-values.html',
+    date: new Date(2025, 2, 26),
   },
   {
     type: 'humanSkills',
@@ -37,6 +33,7 @@ let allArticles = [
     heading: 'Learning Plan',
     overview: 'My plan of action',
     ahref: 'blog/learning-plan.html',
+    date: new Date(2025, 2, 26),
   },
   {
     type: 'technical',
@@ -44,6 +41,7 @@ let allArticles = [
     heading: 'JS Fundamentals',
     overview: 'The basics of Javascript',
     ahref: 'blog/javascript-dom.html',
+    date: new Date(2025, 3, 8),
   },
   {
     type: 'humanSkills',
@@ -51,6 +49,7 @@ let allArticles = [
     heading: 'Emotional Intelligence',
     overview: 'Emotional intelligence and why it is important',
     ahref: 'blog/emotional-intelligence.html',
+    date: new Date(2025, 3, 16),
   },
   {
     type: 'humanSkills',
@@ -58,6 +57,7 @@ let allArticles = [
     heading: 'Te Whare Tapa Wh&#227;',
     overview: 'My wellbeing plan',
     ahref: 'blog/te-whare-tapa-wha.html',
+    date: new Date(2025, 3, 25),
   },
   {
     type: 'humanSkills',
@@ -66,11 +66,23 @@ let allArticles = [
     overview:
       'Looking at the malleability of our brains and the growth mindset',
     ahref: 'blog/neuroplasticity.html',
+    date: new Date(2024, 3, 25),
+  },
+  {
+    type: 'technical',
+    image: 'images/problem-solving.jpg alt="Equation"',
+    heading: 'Problem solving',
+    overview: 'Techniques to conquer those pesky problems',
+    ahref: 'blog/problem-solving.html',
+    date: new Date(2025, 3, 25),
   },
 ];
 
-//Display all articles on loading page
+//Display all articles and recent posts when loading home/index page
 displayArticles(allArticles);
+displayRecentPosts(sortByDate(allArticles));
+
+//--Filter for article overview--//
 
 //Event listeners for clicks to filter by technical/all/human skills
 document.getElementById('showAll').addEventListener('click', () => {
@@ -104,10 +116,36 @@ function displayArticles(articleArray) {
       articleArray[i].image +
       '><h1>' +
       articleArray[i].heading +
-      '</h1><p>' +
+      '</h1><p><em>' +
+      articleArray[i].date.toDateString() +
+      '</em><p>' +
       articleArray[i].overview +
       '</p> <a class="pale-rectangle-link" href=' +
       articleArray[i].ahref +
       '>Read more</a></div>';
+  }
+}
+
+//--Functions to add article names to recent posts in date order--//
+
+//Function to sort posts by date and add to most recent posts,
+// return array of most recent 5 articles
+function sortByDate(articleArray) {
+  return articleArray
+    .toSorted((past, recent) => recent.date.getTime() - past.date.getTime())
+    .slice(0, 5);
+}
+
+//Display article array within list in top posts
+function displayRecentPosts(articleArray) {
+  for (let i = 0; i < articleArray.length; i++) {
+    document.getElementById('posts-by-date').innerHTML +=
+      '<li><em>' +
+      articleArray[i].date.toDateString() +
+      '</em></br><a href=' +
+      articleArray[i].ahref +
+      '>' +
+      articleArray[i].heading +
+      '</a></li>';
   }
 }
