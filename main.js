@@ -116,13 +116,11 @@ function displayArticles(articleArray) {
       articleArray[i].image +
       '><h1>' +
       articleArray[i].heading +
-      '</h1><p><em>' +
-      articleArray[i].date.toDateString() +
-      '</em><p>' +
+      '</h1><p>' +
       articleArray[i].overview +
       '</p> <a class="pale-rectangle-link" href=' +
       articleArray[i].ahref +
-      '>Read more</a></div>';
+      '>Read more...</a></div>';
   }
 }
 
