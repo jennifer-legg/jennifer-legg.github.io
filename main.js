@@ -8,7 +8,7 @@ let allArticles = [
     overview:
       'A foot accustomed to running over roots makes the speediest runner.',
     ahref: 'blog/te-houtaewa-template.html',
-    date: new Date(2010, 11, 10),
+    date: new Date(2010, 10, 10),
   },
   {
     type: 'technical',
@@ -16,7 +16,7 @@ let allArticles = [
     heading: 'HTML and CSS',
     overview: 'Best practices - using classes vs. ids',
     ahref: 'blog/html-css.html',
-    date: new Date(2025, 2, 25),
+    date: new Date(2025, 1, 25),
   },
   {
     type: 'humanSkills',
@@ -25,7 +25,7 @@ let allArticles = [
     heading: 'Identity, Values and Strengths Exploration',
     overview: 'A bit about me',
     ahref: 'blog/identity-values.html',
-    date: new Date(2025, 2, 26),
+    date: new Date(2025, 1, 26),
   },
   {
     type: 'humanSkills',
@@ -33,7 +33,7 @@ let allArticles = [
     heading: 'Learning Plan',
     overview: 'My plan of action',
     ahref: 'blog/learning-plan.html',
-    date: new Date(2025, 2, 26),
+    date: new Date(2025, 1, 26),
   },
   {
     type: 'technical',
@@ -41,7 +41,7 @@ let allArticles = [
     heading: 'JS Fundamentals',
     overview: 'The basics of Javascript',
     ahref: 'blog/javascript-dom.html',
-    date: new Date(2025, 3, 8),
+    date: new Date(2025, 2, 8),
   },
   {
     type: 'humanSkills',
@@ -49,7 +49,7 @@ let allArticles = [
     heading: 'Emotional Intelligence',
     overview: 'Emotional intelligence and why it is important',
     ahref: 'blog/emotional-intelligence.html',
-    date: new Date(2025, 3, 16),
+    date: new Date(2025, 2, 16),
   },
   {
     type: 'humanSkills',
@@ -57,7 +57,7 @@ let allArticles = [
     heading: 'Te Whare Tapa Wh&#227;',
     overview: 'My wellbeing plan',
     ahref: 'blog/te-whare-tapa-wha.html',
-    date: new Date(2025, 3, 25),
+    date: new Date(2025, 2, 25),
   },
   {
     type: 'humanSkills',
@@ -66,7 +66,7 @@ let allArticles = [
     overview:
       'Looking at the malleability of our brains and the growth mindset',
     ahref: 'blog/neuroplasticity.html',
-    date: new Date(2025, 3, 25),
+    date: new Date(2025, 2, 25),
   },
   {
     type: 'technical',
@@ -74,13 +74,13 @@ let allArticles = [
     heading: 'Problem solving',
     overview: 'Techniques to conquer those pesky problems',
     ahref: 'blog/problem-solving.html',
-    date: new Date(2025, 3, 26),
+    date: new Date(2025, 2, 26),
   },
 ];
 
 //Display all articles and recent posts when loading home/index page
 displayArticles(allArticles);
-displayRecentPosts(sortByDate(allArticles));
+displayRecentPosts(sortByDate(allArticles, 5));
 
 //--Filter for article overview--//
 
@@ -127,11 +127,11 @@ function displayArticles(articleArray) {
 //--Functions to add article names to recent posts in date order--//
 
 //Function to sort posts by date and add to most recent posts,
-// return array of most recent 5 articles
-function sortByDate(articleArray) {
+// return array of most recent (number specified) articles
+function sortByDate(articleArray, numberOfArticles) {
   return articleArray
     .toSorted((past, recent) => recent.date.getTime() - past.date.getTime())
-    .slice(0, 5);
+    .slice(0, numberOfArticles);
 }
 
 //Display article array within list in top posts
