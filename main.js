@@ -111,16 +111,10 @@ function displayArticles(articleArray) {
   let articleContainer = document.getElementById('article-container');
   articleContainer.innerHTML = '';
   for (let i = 0; i < articleArray.length; i++) {
-    articleContainer.innerHTML +=
-      '<div class= "article"> <img class="article-img" src= ' +
-      articleArray[i].image +
-      '><h1>' +
-      articleArray[i].heading +
-      '</h1><p>' +
-      articleArray[i].overview +
-      '</p> <a class="pale-rectangle-link" href=' +
-      articleArray[i].ahref +
-      '>Read more...</a></div>';
+    articleContainer.innerHTML += `<div class= "article"><img class="article-img" 
+    src=${articleArray[i].image}><h1>${articleArray[i].heading}</h1>
+    <p>${articleArray[i].overview}</p><a class="pale-rectangle-link" 
+    href="${articleArray[i].ahref}">Read more...</a></div>`;
   }
 }
 
@@ -137,13 +131,9 @@ function sortByDate(articleArray, numberOfArticles) {
 //Display article array within list in top posts
 function displayRecentPosts(articleArray) {
   for (let i = 0; i < articleArray.length; i++) {
-    document.getElementById('posts-by-date').innerHTML +=
-      '<li><em>' +
-      articleArray[i].date.toDateString() +
-      '</em></br><a href=' +
-      articleArray[i].ahref +
-      '>' +
-      articleArray[i].heading +
-      '</a></li>';
+    document.getElementById(
+      'posts-by-date'
+    ).innerHTML += `<li><em> ${articleArray[i].date.toDateString()} </em></br>
+      <a href= ${articleArray[i].ahref}>${articleArray[i].heading}</a></li>`;
   }
 }
