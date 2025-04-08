@@ -76,6 +76,14 @@ let allArticles = [
     ahref: 'blog/problem-solving.html',
     date: new Date(2025, 2, 26),
   },
+  {
+    type: 'humanSkills',
+    image: 'images/foundations-reflection.jpg alt="Equation"',
+    heading: 'Foundations reflection',
+    overview: 'Overview of the human skills learnings from foundation',
+    ahref: 'blog/foundations-reflection.html',
+    date: new Date(2025, 3, 8),
+  },
 ];
 
 //Display all articles and recent posts when loading home/index page
