@@ -159,7 +159,7 @@ a {
 
 .dropdown-menu {
   overflow: hidden;
-  display: block;
+  display: inline-block;
   padding: 8px;
 }
 
