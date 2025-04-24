@@ -381,13 +381,12 @@ a:hover {
 
   /* settings for nav link to about me page (only visible on mobile/tablets) */
   #nav-about-me {
-    display: block;
-    font-size: 27px;
-    width: 250px;
+    display: inline-block;
+    font-size: 25px;
+    width: 110px;
     text-align: center;
     font-weight: 400;
     margin: 8px;
-    float: left;
     padding: 10px;
   }
 
@@ -464,16 +463,17 @@ a:hover {
   /* Style dropdown button */
   .dropdown-button {
     font-size: 27px;
-    width: 250px;
+    width: 160px;
+    font-size: 25px;
   }
 
   .dropdown-links button {
-    font-size: 25px;
-    width: 250px;
+    font-size: 24px;
+    width: 160px;
   }
 
   .dropdown-links {
-    width: 250px;
+    width: 160px;
   }
 }
 
@@ -490,6 +490,7 @@ a:hover {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     padding: 8px 0px 8px 8px;
+    text-align: center;
   }
 
   #article-container {
@@ -518,13 +519,12 @@ a:hover {
 
   /* settings for nav link to about me page (only visible on mobile/tablets) */
   #nav-about-me {
-    display: block;
+    display: inline-block;
     font-size: 18px;
-    width: 130px;
+    width: 95px;
     text-align: center;
     font-weight: 400;
-    margin: 8px;
-    float: left;
+    margin: 8px 0px 8px 8px;
     padding: 6px;
   }
 
@@ -577,7 +577,7 @@ a:hover {
   .pale-rectangle-link {
     padding: 5px;
     margin: 0px;
-    max-width: 100px;
+    max-width: 90px;
     font-size: 15px;
   }
 
@@ -602,24 +602,24 @@ a:hover {
   /* Dropdown menu */
   .dropdown-menu {
     overflow: hidden;
-    display: block;
+    display: inline-block;
   }
 
   /* Style dropdown button for phones */
   .dropdown-button {
     margin: 0px;
     padding: 5px 2px 5px 2px;
-    width: 130px;
+    width: 95px;
     font-size: 18px;
     font-weight: 400;
   }
 
   .dropdown-links {
-    width: 130px;
+    width: 95px;
   }
 
   .dropdown-links button {
-    width: 130px;
+    width: 95px;
     font-size: 16px;
   }
 
